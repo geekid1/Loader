@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+/* .box{
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    perspective: 400px;
+}
+.box::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: block;
+    transition: 0.5s;
+    transform: skew(30deg);
+}
+.box:hover::after{
+    transform: translateX(100%) scale(0.5) rotate(360deg);
+    transform: skew(90deg);
+    transform: rotateY(30deg);
+
+} */
+/* .block{
+    width: 500px;
+    height: 500px;
+    background-color: green;
+    position: relative;
+    
+}
+.div{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transition: 0.5s;
+}
+.box_1{
+    left: 0;
+    top: 0;
+    background-color: hotpink;
+}
+.box_2{
+    right: 0;
+    top: 0;
+    background-color: red;
+}
+.box_3{
+    left: 0;
+    bottom:  0;
+    background-color: blue;
+}
+.box_4{
+    right: 0;
+    bottom:  0;
+    background-color: yellow;
+}
+.block:hover .box_1{
+    left: -50%;
+    top: -50%;
+}
+.block:hover .box_2{
+    right: -50%;
+    top: -50%;
+}
+.block:hover .box_3{
+    left: -50%;
+    bottom:  -50%;
+}
+.block:hover .box_4{
+    right: -50%;
+    bottom: -50%;
+}
+.block:hover .div{
+    transform: rotate(360deg) scale(1.2);
+} */
+/* .item {
+    width: 500px;
+    height: 500px;
+    background-color: yellowgreen;
+    animation-name: first;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+} */
+
+/* @keyframes first {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+} */
+.loader {
+    width: 300px;
+    height: 300px;
+    /* background-color: rgb(39, 56, 58); */
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    animation: load 2s linear infinite;
+}
+@keyframes load {
+    0%{
+        transform: rotate(0);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loader::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 225, 255);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(0, 225, 255),
+        0 0 20px rgb(0, 225, 255),
+        0 0 30px rgb(0, 225, 255),
+        0 0 40px rgb(0, 225, 255),
+        0 0 50px rgb(0, 225, 255),
+        0 0 60px rgb(0, 225, 255),
+        0 0 70px rgb(0, 225, 255),
+        0 0 80px rgb(0, 225, 255),
+        0 0 90px rgb(0, 225, 255),
+        0 0 100px rgb(0, 225, 255);
+        animation: name linear 2s infinite;
+}
+
+.loader::before {
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 225, 255, 0.6), transparent);
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    background-size: 150px 250px;
+    background-repeat: no-repeat;
+    animation: name linear 2s infinite;
+}
+@keyframes name {
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+.circle{
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    /* background-color: rgb(39, 56, 58); */
+    background-image: linear-gradient(to bottom, rgba(231, 245, 31, 0.842), transparent);
+    background-color: rgb(240, 8, 8);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
